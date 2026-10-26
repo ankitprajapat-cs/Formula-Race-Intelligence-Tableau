@@ -5,7 +5,7 @@ A comprehensive data analytics and visualization project built using **Tableau P
 ---
 
 ## 🔗 Live Tableau Public Dashboard
-👉 **[View Interactive Dashboard & Story Here](https://public.tableau.com/views/Formula1RaceIntelligenceDashboard/Story1)**  
+👉 **[View Interactive Dashboard & Story Here](https://public.tableau.com/shared/5DR6YPFGJ?:display_count=n&:origin=viz_share_link)**  
 
 ---
 
