@@ -1,6 +1,6 @@
 # Formula 1 Race Intelligence Dashboard & Analytics
 
-A comprehensive data analytics and visualization project built using **Tableau Public** analyzing Formula 1 historical race data, driver performance, constructor battles, and reliability trends.
+Explore F1 history with this interactive Tableau dashboard. Analyzing 13.7k+ records across 17 seasons, it features dynamic visualizations like a Top N Driver Leaderboard, Team Championship trends, and vehicle reliability analytics. Built with relational data modeling, calculated fields, and global filters for deep motorsport insights.
 
 ## 📊 Project Overview & Visualizations
 1. **Driver Leaderboard:** Analysis of all-time leading drivers based on average and cumulative championship points.
