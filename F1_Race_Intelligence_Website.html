@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Formula 1 Race Intelligence</title>
+  <style>
+    :root{--bg:#0b1019;--panel:#141e2d;--line:#2b394d;--text:#f5f7fa;--muted:#9aa8ba;--red:#e10600;--blue:#526b8f}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(ellipse at top right,#202b3c,#0b1019 55%);color:var(--text);font:15px/1.5 Inter,Segoe UI,Arial,sans-serif}
+    header{padding:40px max(20px,calc((100vw - 1200px)/2));border-bottom:1px solid var(--line);background:#101827cc}
+    .eyebrow{color:#ff7772;text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:800}
+    h1{font-size:clamp(32px,5vw,54px);line-height:1.04;margin:12px 0}
+    .sub{max-width:800px;color:var(--muted)}
+    main{max-width:1200px;margin:auto;padding:26px 20px 54px}
+    .toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+    select,button{background:#172234;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px}
+    button{cursor:pointer}
+    button:hover{border-color:var(--red)}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .kpi,.panel{background:linear-gradient(145deg,#162131,#101722);border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:0 10px 30px #0002}
+    .kpi span{display:block;color:var(--muted);font-size:11px;letter-spacing:.09em;text-transform:uppercase}
+    .kpi strong{display:block;font-size:clamp(26px,3vw,38px);margin-top:6px}
+    .kpi small{color:#ff7772}
+    .section{margin:30px 0 13px;display:flex;justify-content:space-between;gap:12px;align-items:end}
+    h2{font-size:22px;margin:0}
+    .hint,.note{font-size:12px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .panel h3{font-size:16px;margin:0 0 14px}
+    .chart{overflow:hidden}
+    .chart svg{display:block;width:100%;height:auto}
+    .tablewrap{overflow:auto}
+    table{width:100%;border-collapse:collapse;font-size:13px}
+    td,th{text-align:left;padding:10px;border-bottom:1px solid var(--line);white-space:nowrap}
+    th{color:var(--muted)}
+    .num{text-align:right;font-variant-numeric:tabular-nums}
+    .insights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .tag{font-size:11px;color:#ff9995;background:#2b1720;padding:4px 7px;border-radius:5px}
+    .panel p{color:var(--muted);font-size:13px}
+    .note{margin-top:16px}
+    .viz-container{display:flex;justify-content:center;align-items:center;overflow-x:auto;padding:10px 0}
+    footer{border-top:1px solid var(--line);text-align:center;padding:20px;color:var(--muted);font-size:12px}
+    @media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}.grid,.insights{grid-template-columns:1fr}.section{align-items:start;flex-direction:column}}
+    @media(max-width:430px){main{padding:16px 10px}.kpi{padding:12px}.kpi strong{font-size:24px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Motorsport analytics · Tableau workbook companion</div>
+    <h1>Formula 1<br><span style="color:#e10600">Race Intelligence</span></h1>
+    <p class="sub">A web-ready companion to your Tableau report, exploring team performance, driver reliability, tyre usage, season trends and global participation.</p>
+  </header>
+
+  <main>
+    <!-- KPIs Section -->
+    <div class="kpis">
+      <div class="kpi"><span>Competing teams</span><strong>10</strong><small>Distinct team labels</small></div>
+      <div class="kpi"><span>Seasons in play</span><strong>17</strong><small>2010–2026</small></div>
+      <div class="kpi"><span>Race outcomes logged</span><strong>6,464</strong><small>Driver-race rows</small></div>
+      <div class="kpi"><span>Circuits showcased</span><strong>29</strong><small>Reference circuit table</small></div>
+    </div>
+
+    <!-- Live Interactive Tableau Embed Section -->
+    <div class="section">
+      <h2>Live Interactive Tableau Story & Dashboard</h2>
+      <span class="hint">Published on Tableau Public</span>
+    </div>
+
+    <div class="panel viz-container">
+      <div class='tableauPlaceholder' id='viz1793393511209' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Formula 1 Analysis. ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnkitEn25it3010010&#47;F1Story&#47;1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='AnkitEn25it3010010&#47;F1Story' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnkitEn25it3010010&#47;F1Story&#47;1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+    </div>
+
+    <!-- Breakdown Details -->
+    <div class="section">
+      <h2>Key Takeaways & Reliability Notes</h2>
+      <span class="hint">Insights synthesized from dataset</span>
+    </div>
+    <div class="insights">
+      <div class="panel">
+        <span class="tag">Constructor Battles</span>
+        <h3>Red Bull & Mercedes Era</h3>
+        <p>Consistent championship dominance with
